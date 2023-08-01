@@ -2,23 +2,22 @@
 
 .card {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
     color: white;
     padding: 0;
     border-radius: 8px;
-    margin: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    width: 90%;
-    height: 40em;
+    scale: 0.8;
+    height: 35em;
     font-size: 10px;
     position: relative;
 
     h2 {
+        display: flex;
         margin-left: 8px;
         position: relative; 
-        z-index: 1; 
+        z-index: 1;
+        justify-content: flex-start;
+        align-items: flex-end; 
     }
 
     &::before {

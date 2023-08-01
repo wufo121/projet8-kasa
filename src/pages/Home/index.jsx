@@ -10,7 +10,7 @@ import '../../style/Home.scss';
 
 function Home() {
     return (
-        <div>
+        <div className='section-home'>
             <div className='Banner'>
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>

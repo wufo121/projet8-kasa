@@ -1,0 +1,51 @@
+
+
+.Banner {
+    display: flex;
+    background-image: url("/assets/Home.png"); 
+    background-size: cover; 
+    background-position: center;
+    border-radius: 25px;
+    height: 12em;
+    justify-content: center;
+    position: relative; 
+    margin: 0 30px 0 30px;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.3); 
+        border-radius: inherit; 
+    }
+
+    h1{
+        color: white;
+        display:flex;
+        justify-content:center ;
+        align-items: center;
+        background-color: transparent;
+        z-index: 1; 
+    }
+}
+
+.logement {
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    margin: 30px 30px 0 30px;
+}
+
+.logement-cards {
+     
+    margin: 20px;
+
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+

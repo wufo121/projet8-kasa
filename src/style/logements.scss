@@ -1,0 +1,138 @@
+@import './settings';
+
+
+.carousel{
+    display: flex;
+    position: relative;
+    margin-left: $margin;
+    margin-right: $margin;
+
+    .Arrow-right {
+        position: absolute;
+        color:white;
+        font-size: 10em;
+        right: 0;
+        font-weight: 900;
+        background: transparent;
+        border: none;
+        top:30%;
+        
+    }
+
+    .Arrow-left {
+        position: absolute;
+        color:white;
+        font-size: 10em;
+        font-weight: 900;
+        background: transparent;
+        border: none;
+        top:30%;
+    }
+
+    img{
+        
+        border-radius: 15px;
+        width: 100%;
+        height: 35em;
+        object-fit: cover;
+        position: relative;
+        z-index: -1; 
+    }
+
+
+    .counterSlides{
+        position: absolute;
+        color: white;
+        font-weight: 600;
+        bottom: 0;
+        right: 50%;
+    }
+}
+
+
+
+.presentation {
+    display: flex;
+    margin-left: $margin;
+    margin-right: $margin;
+    justify-content: space-between;
+  
+    .presentation-left-part {
+      width: 75%;
+  
+      h2 {
+        font-size: 2em;
+        color: $main-color;
+        margin: 1.3em 0 0 0;
+        width: 70%;
+      }
+  
+      .Tags {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+  
+        &-style {
+          color: white;
+          padding: 5px 15px;
+          margin-right: 1.2em;
+          border-radius: 25px;
+          background-color: $main-color;
+          font-weight: 600;
+        }
+      }
+  
+      .place {
+        color: $main-color;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  
+    .presentation-right-part {
+      position: relative;
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+
+      .host{
+        position: relative;
+        left: 4em;
+        display: flex;
+        align-items: center;
+
+        .name-host{
+            color: $main-color;
+            font-weight: 600;
+          }
+          
+          .image-host{
+            object-fit: contain;
+            border-radius: 50%;
+            width: 7em;
+            height: 7em;
+           padding-left: 7px;
+         }
+      }
+
+      .rating-list{
+        
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+      }
+
+      .faStar{
+        margin-left: 10px;
+        font-size: 1.5em;
+      }
+      .faStarPink{
+        color: $main-color;
+        margin-left: 10px;
+        font-size: 1.5em;
+      
+      }
+    }
+  }

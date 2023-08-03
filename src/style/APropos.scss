@@ -1,0 +1,17 @@
+@import './settings';
+
+.Banner-APropos {
+    display: flex;
+    background-image: url("../assets/APropos.png"); 
+    background-size: crgb(33, 33, 44); 
+    background-position: center;
+    border-radius: 25px;
+    height: 12em;
+    justify-content: center;
+    position: relative; 
+}
+
+.Section-APropos{
+    margin-left: 10%;
+    margin-right: 10%;
+}

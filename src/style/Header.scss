@@ -2,9 +2,12 @@
 
 
 .header-nav {
+
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin-left: 7%;
+    margin-right:10% ;
+    margin-bottom: 2em;
 
     .header-link {
         display: flex;
@@ -14,6 +17,7 @@
         }
 
         a {
+            font-size: large;
             margin-right: 20px;
             text-decoration: none; 
             color: $main-color;

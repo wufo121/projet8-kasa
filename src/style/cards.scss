@@ -1,4 +1,15 @@
-/* cards.scss */
+@import './settings';
+
+
+a{
+    text-decoration: none;
+
+    :hover{
+        transform:scale(1.05) ;
+        transition: all ease-in-out 0.3s;
+    }
+}
+
 
 .card {
     display: flex;
@@ -11,13 +22,16 @@
     font-size: 10px;
     position: relative;
 
-    h2 {
+    
+
+    h3 {
         display: flex;
         margin-left: 8px;
         position: relative; 
         z-index: 1;
         justify-content: flex-start;
         align-items: flex-end; 
+        font-size: large;
     }
 
     &::before {

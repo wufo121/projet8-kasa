@@ -4,21 +4,15 @@ import '../../components/logements/logements.json'
 
 
 
-import React from 'react';
-import '../../style/Home.scss';
-
-
 function Home() {
     return (
         <div className='section-home'>
             <div className='Banner'>
                 <h1>Chez vous, partout et ailleurs</h1>
             </div>
-            <section className='logement'>
-                <div className='logement-cards'>
-                    <Cards />
-                </div>
-            </section>
+            <div className='logement'>
+                <Cards />
+            </div>
         </div>
     );
 }

@@ -1,0 +1,64 @@
+@import './settings.scss';
+
+.information{
+    align-items: center;
+    display: flex;
+    background-color: $main-color;
+    height: 4em;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    border-radius: 15px;
+    position: relative;
+    
+
+}
+
+.Arrow {
+    scale:0.3;
+    position: absolute;
+    background-color: $main-color;
+    border: none;
+    top:-20px;
+    right: 0;
+    animation: rotate linear 0.3s ease;
+}
+
+
+h2{
+    margin-left: 1em;
+    color: white;
+}
+
+.unroll{
+    position: absolute;
+    z-index: -1;
+    width:100%;
+    height: 100%;
+    background-color: gray;
+    border-radius: 15px;
+    animation: apparition 1s ease ;
+    transform: scaleY(0);
+}
+
+@keyframes apparition {
+
+    0% {
+        transform :translate(0,0)
+    }
+
+
+    100% {
+        transform :translate(0,100%)
+    }
+}
+
+@keyframes rotate {
+
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{transform: rotate(180deg);}
+}

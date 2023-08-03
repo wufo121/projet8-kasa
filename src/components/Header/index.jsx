@@ -9,7 +9,7 @@ function Header() {
             <img src={logo} alt="Logo" />
             <div className='header-link'>
                 <Link to="/">Acceuil</Link>
-                <Link to="../pages/APropos/index.jsx">A Propos</Link>
+                <Link to="/Apropos">A Propos</Link>
             </div>
         </nav>
     );

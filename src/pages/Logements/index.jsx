@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import '../../style/logements.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Collapse from '../../components/collapse';
 
 function Logements() {
   const { id } = useParams();
@@ -17,8 +18,9 @@ function Logements() {
   }
 
  
-  const { title, pictures, tags,location,host,rating } = logement;
+  const { title, pictures, tags,location,host,rating,description,equipments } = logement;
   const [firstName, lastName] = host.name.split(' ');
+
   return (
     <div>
       <LogementCarousel title={title} pictures={pictures} />
@@ -36,7 +38,14 @@ function Logements() {
             <StarRating rating={rating} />
         </div>
       </div>
-      <div className='collapse'></div>
+      <div className='collapse-logement'>
+        <div className='collapse-description'>
+          <Collapse  titleCollapse="Description" descriptionCollapse={description} />
+        </div>
+        <div className='collapse-equipement'>
+          <Collapse  titleCollapse="Equipements" descriptionCollapse={<EquipmentsList equipments={equipments} />} />
+        </div>
+      </div>
     </div>
   );
 }
@@ -88,6 +97,16 @@ function TagsList({ tags }) {
               className={index < StarRating ? 'faStarPink' : 'faStar'}
             />
           </li>
+        ))}
+      </ul>
+    );
+  }
+
+  function EquipmentsList({ equipments }) {
+    return (
+      <ul className="equipments-list">
+        {equipments.map((equipment, index) => (
+          <li key={index}>{equipment}</li>
         ))}
       </ul>
     );

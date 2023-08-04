@@ -4,14 +4,10 @@ import '../../style/cards.scss';
 import { Link } from 'react-router-dom';
 
 function Card({ id, title, cover }) {
-  const cardStyle = {
-    backgroundImage: `url(${cover})`,
-    backgroundSize: 'cover',
-  };
-
   return (
     <Link to={`/Logements/${id}`} className="card-link">
-      <div className="card" style={cardStyle}>
+      <div className="card">
+        <img src={cover} alt={title} />
         <h3>{title}</h3>
       </div>
     </Link>

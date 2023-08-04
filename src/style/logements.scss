@@ -136,3 +136,25 @@
       }
     }
   }
+
+  
+
+.collapse-logement{
+  display: flex;
+  justify-content: space-around;
+  margin-left: $margin;
+  margin-right: $margin;
+  gap: 20px;
+
+  ul{
+    margin: 0;
+  }
+
+  .collapse-description{
+    width: 50%;
+  }
+
+  .collapse-equipement{
+    width: 50%;
+  }
+}

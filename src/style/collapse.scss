@@ -1,64 +1,82 @@
 @import './settings.scss';
 
-.information{
-    align-items: center;
-    display: flex;
-    background-color: $main-color;
-    height: 4em;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 5em;
-    margin-bottom: 5em;
-    border-radius: 15px;
+.collapse {
+  
+  overflow: hidden;
+
+  &-visible {
     position: relative;
-    
-
-}
-
-.Arrow {
-    scale:0.3;
-    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: $main-color;
     border: none;
-    top:-20px;
-    right: 0;
-    animation: rotate linear 0.3s ease;
-}
-
-
-h2{
-    margin-left: 1em;
-    color: white;
-}
-
-.unroll{
-    position: absolute;
-    z-index: -1;
-    width:100%;
-    height: 100%;
-    background-color: gray;
     border-radius: 15px;
-    animation: apparition 1s ease ;
-    transform: scaleY(0);
-}
+    height: 5em;
+    width: 100%;
 
-@keyframes apparition {
-
-    0% {
-        transform :translate(0,0)
+    p {
+      position: absolute;
+      left: 10px;
+      color: white;
+      font-weight: 600;
+      font-size: 1.5em;
     }
 
+    .ArrowUp {
+      object-fit: cover;
+      position: absolute;
+      right: 2em;
+      height: 25px;
+      transition: transform 0.2s ease-in-out;
 
-    100% {
-        transform :translate(0,100%)
+      &.ArrowUp-Active {
+        transform: rotate(180deg); // Applique la rotation lorsque la classe ArrowUp-Active est présente
+      }
     }
-}
 
-@keyframes rotate {
+    &-Active {
+      object-fit: cover;
+      position: absolute;
+      right: 2em;
+      height: 25px;
+      transform: rotate(180deg);
+    }
+  }
 
-    0%{
-        transform: rotate(0);
+  &-toggle {
+    position: relative;
+    z-index: -1;
+    top: -4em;
+    height: 0px;
+    border-radius: 0 0 15px 15px;
+    margin: 0;
+    padding: 30px 15px 10px 15px;
+    background-color: #F6F6F6;
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      height 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+
+    p {
+      opacity: 0;
+      color: $main-color;
+      font-size: 17px;
+      
     }
 
-    100%{transform: rotate(180deg);}
+    &.animated {
+      transform: translateY(30%);
+      opacity: 1;
+      transition:
+        height 0.3s ease-in-out,
+        transform 0.3s ease-in-out;
+
+      p {
+        opacity: 1;
+        transition: opacity 0.3s 0.2s ease-in-out;
+      }
+    }
+  }
 }

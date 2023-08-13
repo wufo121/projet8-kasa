@@ -158,3 +158,41 @@
     width: 50%;
   }
 }
+
+
+@media (max-width: 768px) {
+  
+  .presentation {
+    flex-direction: column;
+
+    .presentation-right-part {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: 0;
+    }
+
+    .rating-list{
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .host{
+      margin-right: 20px;
+    }
+  }
+  .collapse-logement{
+    margin-top: 4em;
+    display: block;
+    
+      .collapse-description{
+        width: 100%;
+      }
+    
+      .collapse-equipement{
+        width: 100%;
+      }
+    }
+  }
+  

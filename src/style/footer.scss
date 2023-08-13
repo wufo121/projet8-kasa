@@ -21,3 +21,12 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .paragraph{
+        flex-direction: column;
+         p{
+            margin:0 0 4px 0;
+         }
+    }
+}

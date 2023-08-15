@@ -3,33 +3,34 @@
 
 .carousel{
     display: flex;
+    align-items: center;
     position: relative;
     margin-left: $margin;
     margin-right: $margin;
 
     .Arrow-right {
         position: absolute;
-        color:white;
-        font-size: 10em;
-        right: 0;
-        font-weight: 900;
-        background: transparent;
+        width: 15%;
+        right:0;
+        z-index: 1;
         border: none;
-        top:30%;
+        background-color: transparent;
+        scale: 0.6;
+        padding: 0;
         
     }
 
     .Arrow-left {
-        position: absolute;
-        color:white;
-        font-size: 10em;
-        font-weight: 900;
-        background: transparent;
-        border: none;
-        top:30%;
+      width: 15%;
+      position: absolute;
+      scale: 0.6;
+      border: none;
+      z-index: 1;
+      background-color: transparent;
+      padding: 0;
     }
 
-    img{
+    .carouselImg{
         
         border-radius: 15px;
         width: 100%;

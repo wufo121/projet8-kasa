@@ -5,6 +5,8 @@ import '../../style/logements.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Collapse from '../../components/collapse';
+import arrowRight from '../../assets/arrowRight.svg'
+import arrowLeft from '../../assets/arrowLeft.svg'
 
 function Logements() {
   const { id } = useParams();
@@ -65,10 +67,14 @@ function LogementCarousel({ title, pictures }) {
   return (
     <div>
       <div className='carousel'>
-        <button className='Arrow-left' onClick={PreviewImage}>&lt;</button>
-        <button className='Arrow-right' onClick={NextImage}>&gt;</button>
-        <img src={pictures[CurrentImage]} alt={title} />
-        <p className='counterSlides'>{CurrentImage + 1}/{pictures.length}</p>
+        <button className='Arrow-left' onClick={PreviewImage}>
+          <img src={arrowLeft} alt="Previous" />
+        </button>
+        <button className='Arrow-right' onClick={NextImage}>
+          <img src={arrowRight} alt="Next" />
+        </button>
+          <img className='carouselImg' src={pictures[CurrentImage]} alt={title} />
+          <p className='counterSlides'>{CurrentImage + 1}/{pictures.length}</p>
       </div>
     </div>
   );

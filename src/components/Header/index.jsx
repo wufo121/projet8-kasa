@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Assuming you use React Router for routing
+import { Link } from 'react-router-dom'; 
 import logo from '../../assets/logo-Kasa.png';
 import '../../style/Header.scss';
 

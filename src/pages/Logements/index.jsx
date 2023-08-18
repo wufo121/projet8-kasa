@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import logementsData from '../../components/logements/logements.json';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import '../../style/logements.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Collapse from '../../components/collapse';
 import arrowRight from '../../assets/arrowRight.svg'
 import arrowLeft from '../../assets/arrowLeft.svg'
+
 
 function Logements() {
   const { id } = useParams();
@@ -16,9 +17,8 @@ function Logements() {
   
 
   if (!logement) {
-    return <div>Logement non trouvé.</div>;
+    return <Navigate to="/error" />;
   }
-
  
   const { title, pictures, tags,location,host,rating,description,equipments } = logement;
   const [firstName, lastName] = host.name.split(' ');

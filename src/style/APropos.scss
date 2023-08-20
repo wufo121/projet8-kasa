@@ -11,9 +11,16 @@
     justify-content: center;
     position: relative; 
     margin-bottom: 5em;
+    background-size: cover;
 }
 
 .Section-APropos{
     margin-left: $margin;
     margin-right: $margin;
+}
+
+@media (max-width: 768px) {
+    .Banner-APropos {
+       height:20em;
+    }
 }

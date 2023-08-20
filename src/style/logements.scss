@@ -1,7 +1,7 @@
 @import './settings';
 
 
-.carousel{
+.carrousel{
     display: flex;
     align-items: center;
     position: relative;
@@ -30,7 +30,7 @@
       padding: 0;
     }
 
-    .carouselImg{
+    .carrouselImg{
         
         border-radius: 15px;
         width: 100%;
@@ -189,6 +189,7 @@
     
       .collapse-description{
         width: 100%;
+        height: auto;
       }
     
       .collapse-equipement{
@@ -196,4 +197,47 @@
       }
     }
   }
+  
+  @media (max-width: 375px) {
+  
+
+  
+    .presentation-right-part {
+      scale: 0.7;
+    }
+    .presentation-left-part {
+
+      h2 {
+        display: flex;
+        margin-top:0;
+        font-size: 1.2em;
+        width: 100%;
+      }
+
+      .Tags {
+        scale:0.5;
+        white-space: nowrap;
+        position: relative;
+        right:25%;
+         .Tags-style{
+          padding:10 30px;
+         }
+      }
+    }
+
+    
+    .collapse-logement{
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      
+        .collapse-description{
+          width: 100%;
+      }
+      
+        .collapse-equipement{
+          width: 100%;
+        }
+      }
+    }
   

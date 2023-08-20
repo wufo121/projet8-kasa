@@ -27,3 +27,19 @@
     }
 }
 
+
+@media (max-width: 768px) {
+    .header-nav {
+        position: relative;
+        left:-2em;
+       scale:0.8;
+       margin: 0;
+        
+       a{
+        white-space: nowrap;
+        width: 100%;
+       }
+       
+    }
+}
+

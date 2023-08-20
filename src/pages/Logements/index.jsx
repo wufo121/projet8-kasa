@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
 import logementsData from '../../components/logements/logements.json';
 import { useParams, Navigate } from 'react-router-dom';
 import '../../style/logements.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 import Collapse from '../../components/collapse';
-import arrowRight from '../../assets/arrowRight.svg'
-import arrowLeft from '../../assets/arrowLeft.svg'
+import LogementCarrousel from '../../components/Carrousel';
+import TagsList from '../../components/TagsList';
+import StarRating from '../../components/StarRating';
+import EquipmentsList from '../../components/EquipementsList';
+
 
 
 function Logements() {
@@ -25,7 +25,7 @@ function Logements() {
 
   return (
     <div>
-      <LogementCarousel title={title} pictures={pictures} />
+      <LogementCarrousel title={title} pictures={pictures} />
       <div className='presentation'>
             <div className='presentation-left-part'>
             <h2>{title}</h2>
@@ -52,70 +52,9 @@ function Logements() {
   );
 }
 
-function LogementCarousel({ title, pictures }) {
 
-  const [CurrentImage, setCurrentImage] = useState(0)
-  const PreviewImage = () => {
-
-    setCurrentImage((prevIndex) => (prevIndex === 0 ? pictures.length - 1 : prevIndex - 1));
-  };
-
-  const NextImage = () => {
-    setCurrentImage((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1));
-  };
-
-  return (
-    <div>
-      <div className='carousel'>
-        <button className='Arrow-left' onClick={PreviewImage}>
-          <img src={arrowLeft} alt="Previous" />
-        </button>
-        <button className='Arrow-right' onClick={NextImage}>
-          <img src={arrowRight} alt="Next" />
-        </button>
-          <img className='carouselImg' src={pictures[CurrentImage]} alt={title} />
-          <p className='counterSlides'>{CurrentImage + 1}/{pictures.length}</p>
-      </div>
-    </div>
-  );
-}
-
-function TagsList({ tags }) {
-    return (
-      <ul className="Tags" >
-        {tags.map((tag, index) => (
-          <li className='Tags-style' key={index}>{tag}</li>
-        ))}
-      </ul>
-    );
-  }
-
-  function StarRating({ rating }) {
-    const totalStars = 5;
-    const StarRating = parseInt(rating, 10);
   
-    return (
-      <ul className="rating-list">
-        {Array.from({ length: totalStars }).map((_, index) => (
-          <li key={index}>
-            <FontAwesomeIcon
-              icon={faStar}
-              className={index < StarRating ? 'faStarPink' : 'faStar'}
-            />
-          </li>
-        ))}
-      </ul>
-    );
-  }
 
-  function EquipmentsList({ equipments }) {
-    return (
-      <ul className="equipments-list">
-        {equipments.map((equipment, index) => (
-          <li key={index}>{equipment}</li>
-        ))}
-      </ul>
-    );
-  }
+
 
 export default Logements;
